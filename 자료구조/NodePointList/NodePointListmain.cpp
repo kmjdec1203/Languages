@@ -4,18 +4,23 @@
 #include "NodePointList.h"
 //#include "NodePointList.cpp"
 
-Ldata NewPoint(int x, int y) {
-	Ldata Npoint = (Point*)malloc(sizeof(Point));
-	Npoint->x = x;
-	Npoint->y = y;
+Ldata NewPoint(char N, int K, int E, int M, int C, int S, int R) {
+	Ldata Npoint = (Node*)malloc(sizeof(Node));
+	Npoint->N = N;
+	Npoint->K = K;
+	Npoint->E = E;
+	Npoint->M = M;
+	Npoint->C = C;
+	Npoint->S = S;
+	Npoint->R = R;
 	Npoint->Next = NULL;
 	return Npoint;
 }
 
 int WholsPred(Ldata d1, Ldata d2) {
-	if (d1->x < d2->x) return 0;			// x 좌표가 작은 것이 앞에 위치
+	if (d1->S < d2->S) return 0;			// x 좌표가 작은 것이 앞에 위치
 	else if (d1->x == d2->x)				// x 좌표가 같으면
-		if (d1->y < d2->y) return 0;		// y 좌표가 작은 것이 앞에 위치	
+		if (d1->N < d2->N) return 0;		// y 좌표가 작은 것이 앞에 위치	
 		else return 1;
 	else return 1;
 }
