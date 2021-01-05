@@ -1,5 +1,2 @@
-<<<<<<< HEAD
 Languages
-=======
-CPP-Study
->>>>>>> CPP-Study/master
+여러 언어 공부
